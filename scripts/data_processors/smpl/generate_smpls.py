@@ -15,6 +15,9 @@ from scripts.pretrained_models import (
 
 if "PYOPENGL_PLATFORM" not in os.environ:
     os.environ["PYOPENGL_PLATFORM"] = "egl"
+    
+project_root = Path(__file__).parent.parent.parent.parent
+sys.path.append(os.path.join(project_root, "4D-Humans"))
 
 from hmr2.models import load_hmr2
 from hmr2.utils import recursive_to

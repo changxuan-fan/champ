@@ -1,6 +1,10 @@
 import os
 import argparse
 from pathlib import Path
+
+project_root = Path(__file__).parent.parent.parent
+sys.path.append(os.path.join(project_root, "4D-Humans"))
+
 from hmr2.models import download_models
 from scripts.pretrained_models import (
     DETECTRON2_MODEL_DIR,

@@ -1,5 +1,9 @@
 import os
 from pathlib import Path
+
+project_root = Path(__file__).parent.parent.parent
+sys.path.append(os.path.join(project_root, "4D-Humans"))
+
 from hmr2.models import CACHE_DIR_4DHUMANS
 
 PROJECT_ROOT = Path(__file__).parent.parent.parent;
@@ -14,3 +18,4 @@ SMPL_MODEL_PATH = f"{SMPL_MODEL_DIR}/SMPL_NEUTRAL.pkl"
 
 DETECTRON2_MODEL_DIR = f"{PRETRAINED_MODEL_DIR}/detectron2"
 DETECTRON2_MODEL_PATH = f"{DETECTRON2_MODEL_DIR}/model_final_f05665.pkl"
+

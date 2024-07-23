@@ -74,7 +74,7 @@ def combine_guidance_data(cfg):
     for guidance_type in guidance_types:
         guidance_pil_group[guidance_type] = []
         guidance_image_lst = sorted(
-            Path(osp.join(guidance_data_folder, guidance_type)).iterdir()
+            [f for f in Path(osp.join(guidance_data_folder, guidance_type)).iterdir() if not f.name.startswith('.')]
         )
         guidance_image_lst = (
             guidance_image_lst
@@ -92,7 +92,6 @@ def combine_guidance_data(cfg):
                 guidance_pil_group[guidance_type] += [
                     Image.open(guidance_image_path).convert("RGB")
                 ]
-
     # get video length from the first guidance sequence
     first_guidance_length = len(list(guidance_pil_group.values())[0])
     # ensure all guidance sequences are of equal length
