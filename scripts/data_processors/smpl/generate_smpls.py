@@ -146,8 +146,8 @@ if __name__ == "__main__":
         reference_img_paths = [
             path
             for path in os.listdir(os.path.join(args.reference_imgs_folder, "images"))
+            if not path.startswith('.')
         ]
-
     driving_videos_paths = [args.driving_video_path]
 
     model, model_cfg = load_hmr2(HMR2_DEFAULT_CKPT)
@@ -224,7 +224,9 @@ if __name__ == "__main__":
 
         driving_img_paths = [
             path for path in os.listdir(os.path.join(video_path, "images"))
+            if not path.startswith('.')
         ]
+
         driving_img_paths.sort(key=lambda x: int(x.split(".")[0]))
         smpls = []
         cams = []

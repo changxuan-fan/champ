@@ -11,6 +11,7 @@ import cv2
 from yacs.config import CfgNode
 from typing import List, Optional
 import sys
+from pathlib import Path
 
 project_root = Path(__file__).parent.parent.parent.parent
 sys.path.append(os.path.join(project_root, "4D-Humans"))
