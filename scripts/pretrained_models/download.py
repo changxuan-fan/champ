@@ -1,6 +1,7 @@
 import os
 import argparse
 from pathlib import Path
+import sys
 
 project_root = Path(__file__).parent.parent.parent
 sys.path.append(os.path.join(project_root, "4D-Humans"))

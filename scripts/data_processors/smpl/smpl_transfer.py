@@ -8,6 +8,7 @@ import numpy as np
 from tqdm import tqdm
 import pyrender
 from pathlib import Path
+import sys
 
 from scripts.pretrained_models import HMR2_DEFAULT_CKPT
 

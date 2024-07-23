@@ -7,6 +7,7 @@ import numpy as np
 from tqdm import tqdm
 import platform
 import pyrender
+import sys
 
 from scripts.pretrained_models import (
     DETECTRON2_MODEL_PATH,
